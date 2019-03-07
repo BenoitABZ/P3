@@ -144,6 +144,9 @@ public class MasterMind extends GamePattern {
 
             System.out.println("Perdu : vous n'etes pas parvenu à découvrir la combinaison secrète de l'ordinateur");
 
+            System.out.println(Arrays.toString(secretCombinationComputer));
+
+
 
 
         }
@@ -397,6 +400,9 @@ public class MasterMind extends GamePattern {
         }
 
         System.out.println("Perdu : vous n'etes pas parvenu à découvrir la combinaison secrète de l'ordinateur");
+
+        System.out.println(Arrays.toString(secretCombinationComputer));
+
     }
 
 }
