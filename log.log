@@ -1,0 +1,3 @@
+2019-03-07 00:11:46 INFO  GameLunch:25 - Les séléctions possibles : 1 ou 2
+2019-03-07 00:11:52 INFO  GamePattern:87 - Les séléctions possibles : 1, 2 ou 3
+2019-03-07 00:12:05 INFO  GamePattern:54 - Exception potentielle : dépassement du nombre maximal d'éléments par combinaison
