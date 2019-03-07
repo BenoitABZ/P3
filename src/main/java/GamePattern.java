@@ -66,8 +66,6 @@ public abstract class GamePattern {
             logger.log(Level.ERROR, "Dépassement de capacité, retapez votre combinaison");
 
 
-            //System.out.println("Retapez votre combinaison");
-
             parseInput(sc.next(), tab);
         }
     }

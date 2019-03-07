@@ -120,7 +120,7 @@ public class MasterMind extends GamePattern {
         }
 
 
-        while (maxAttempt != 0 || !Arrays.equals(playerSelection, secretCombinationComputer)) {
+        while (maxAttempt >= 0 && !Arrays.equals(playerSelection, secretCombinationComputer)) {
 
             System.out.println("Chercher la combinaison secrète de l'ordinateur composée de " + tabLength + " chiffres " +  "(" + maxAttempt + " tentatives)");
 
@@ -144,7 +144,7 @@ public class MasterMind extends GamePattern {
 
             System.out.println("Perdu : vous n'etes pas parvenu à découvrir la combinaison secrète de l'ordinateur");
 
-            System.out.println(Arrays.toString(secretCombinationComputer));
+            System.out.println("solution : " + Arrays.toString(secretCombinationComputer));
 
 
 
@@ -236,7 +236,7 @@ public class MasterMind extends GamePattern {
 
                 List<int[]> lstTampon = new ArrayList<>();
 
-                for (int i = 0; i < lst.size(); i++) {
+                for (int i = 1; i < lst.size(); i++) {
 
                     if (sumArbitrage(arbitrage(lst.get(i), computerSelection)) == sum) {
 
@@ -378,7 +378,7 @@ public class MasterMind extends GamePattern {
 
             List<int[]> lstTampon = new ArrayList<>();
 
-            for (int i = 0; i < lst.size(); i++) {
+            for (int i = 1; i < lst.size(); i++) {
 
                 if (sumArbitrage(arbitrage(lst.get(i), computerSelection)) == sum) {
 
@@ -401,7 +401,7 @@ public class MasterMind extends GamePattern {
 
         System.out.println("Perdu : vous n'etes pas parvenu à découvrir la combinaison secrète de l'ordinateur");
 
-        System.out.println(Arrays.toString(secretCombinationComputer));
+        System.out.println("solution : " + Arrays.toString(secretCombinationComputer));
 
     }
 
