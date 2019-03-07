@@ -13,7 +13,7 @@ public class SearchMoreLess extends GamePattern {
 
         int mediane;
 
-        int ValAllowed[] = new int[max];
+        int ValAllowed[] = new int[max+1];
 
         for (int i = min; i < max; i++) {
 
@@ -128,7 +128,7 @@ public class SearchMoreLess extends GamePattern {
 
                     if (j == 1) {
 
-                        param[i] = max + 1;
+                        param[i] = max+1;
 
                     }
                 } else {
@@ -136,13 +136,13 @@ public class SearchMoreLess extends GamePattern {
                     resultat += "=";
                 }
 
-                if (param[i] == min && secretCombinationPlayer[i] < computerSelection[i] || param[i] == max + 1 && secretCombinationPlayer[i] > computerSelection[i]) {
+                if (param[i] == min && secretCombinationPlayer[i] < computerSelection[i] || param[i] == max+1  && secretCombinationPlayer[i] > computerSelection[i]) {
 
                     computerSelection[i] = (median() + ((int) Math.pow(2, j) - 1) * param[i]) / (int) Math.pow(2, j);
 
                 } else {
 
-                    if (param[i] == max + 1 && secretCombinationPlayer[i] < computerSelection[i] || param[i] == min && secretCombinationPlayer[i] > computerSelection[i]) {
+                    if (param[i] == max+1  && secretCombinationPlayer[i] < computerSelection[i] || param[i] == min && secretCombinationPlayer[i] > computerSelection[i]) {
 
                         computerSelection[i] = (((int) Math.pow(2, j) - 1) * median() + param[i]) / (int) Math.pow(2, j);
                     }
