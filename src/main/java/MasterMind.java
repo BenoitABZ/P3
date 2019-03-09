@@ -45,20 +45,16 @@ public class MasterMind extends GamePattern {
     }
 
     private int [] arbitrage (int[] combinationSelection, int [] SecretCombination) {
-
-        int[] cpy1 = new int[tabLength];
-
-        int[] cpy2 = new int[tabLength];
-
+        
         int wellplaced = 0;
 
         int missplaced = 0;
 
         int [] arbitrage = new int [2];
 
-        cpy1 = Arrays.copyOf(combinationSelection, tabLength);
+       int [] cpy1 = Arrays.copyOf(combinationSelection, tabLength);
 
-        cpy2 = Arrays.copyOf(SecretCombination, tabLength);
+       int [] cpy2 = Arrays.copyOf(SecretCombination, tabLength);
 
 
 
