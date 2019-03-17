@@ -45,7 +45,7 @@ public class MasterMind extends GamePattern {
     }
 
     private int [] arbitrage (int[] combinationSelection, int [] SecretCombination) {
-        
+
         int wellplaced = 0;
 
         int missplaced = 0;
@@ -113,6 +113,13 @@ public class MasterMind extends GamePattern {
 
             secretCombinationComputer[i] = random.nextInt(max - 1);
 
+            if (modeConfig == 1) {
+
+                System.out.println("Solution :");
+
+                System.out.println(Arrays.toString(secretCombinationComputer));
+            }
+
         }
 
 
@@ -161,6 +168,7 @@ public class MasterMind extends GamePattern {
 
         parseInput(input, secretCombinationPlayer);
 
+        System.out.println("Merci de patienter...");
 
 
         List<int[]> lst = new ArrayList<>();
@@ -222,7 +230,10 @@ public class MasterMind extends GamePattern {
                 }
             }
 
+
             System.out.println(Arrays.toString(computerSelection));
+
+
 
             int [] arbitrage = arbitrage(computerSelection, secretCombinationPlayer);
 
@@ -268,6 +279,13 @@ public class MasterMind extends GamePattern {
         for (int i = 0; i < tabLength; i++) {
 
             secretCombinationComputer[i] = random.nextInt(max - 1);
+
+            if (modeConfig == 1) {
+
+                System.out.println("Solution :");
+
+                System.out.println(Arrays.toString(secretCombinationComputer));
+            }
 
         }
 

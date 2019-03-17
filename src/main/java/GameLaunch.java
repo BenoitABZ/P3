@@ -6,9 +6,9 @@ import org.apache.log4j.Logger;
 
 import java.util.Scanner;
 
-public class GameLunch {
+public class GameLaunch {
 
-    private static final Logger logger = Logger.getLogger(GameLunch.class);
+    private static final Logger logger = Logger.getLogger(GameLaunch.class);
 
     private final static String gameChoice = " Choix du jeu : (1 : SearchMoreLess, 2 : MasterMind)";
 
@@ -33,12 +33,14 @@ public class GameLunch {
                     return new SearchMoreLess();
                 }
 
-                if (select == 2) {
+                else if (select == 2) {
 
                     System.out.println("Choix : MasterMind");
 
                     return new MasterMind();
                 }
+
+                else throw new IllegalArgumentException();
 
             }catch(Exception e) {
 
@@ -47,7 +49,11 @@ public class GameLunch {
                 selectedGameMain();
             }
 
-            return null;
+             return selectedGameMain();
+
+
+
+
 
         }
     }

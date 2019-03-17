@@ -30,11 +30,20 @@ public class SearchMoreLess extends GamePattern {
 
     public void selectedChallenger() {
 
+
         maxAttempt = main.resources.ExtractProperties.getMaxAttempt();
 
         for (int i = 0; i < tabLength; i++) {
 
             secretCombinationComputer[i] = random.nextInt(max - 1);
+
+            if (modeConfig == 1) {
+
+                System.out.println("Solution :");
+
+                System.out.println(Arrays.toString(secretCombinationComputer));
+            }
+
 
         }
 
@@ -99,6 +108,8 @@ public class SearchMoreLess extends GamePattern {
         String input = sc.next();
 
         parseInput(input, secretCombinationPlayer);
+
+        System.out.println("Merci de patienter...");
 
         fill(computerSelection, median());
 
@@ -185,6 +196,13 @@ public class SearchMoreLess extends GamePattern {
         for (int i = 0; i < tabLength; i++) {
 
             secretCombinationComputer[i] = random.nextInt(max - 1);
+
+            if (modeConfig == 1) {
+
+                System.out.println("Solution :");
+
+                System.out.println(Arrays.toString(secretCombinationComputer));
+            }
 
         }
 

@@ -13,7 +13,7 @@ import org.apache.log4j.Level;
 
 public abstract class GamePattern {
 
-   protected  final Logger logger = Logger.getLogger(GamePattern.class);
+    protected  final Logger logger = Logger.getLogger(GamePattern.class);
 
     private final String modeChoice = "Choix du mode: (1 : Challenger 2 : Defenseur 3 : Dual)";
 
@@ -21,9 +21,12 @@ public abstract class GamePattern {
 
     Random random = new Random();
 
+
     protected static String resultat = "";
 
     protected static int maxAttempt = ExtractProperties.getMaxAttempt();
+
+    protected static int modeConfig= ExtractProperties.getModeConfig();
 
     protected static int tabLength = ExtractProperties.getTablength();
 
